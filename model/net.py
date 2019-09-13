@@ -21,7 +21,7 @@ class Net(nn.Module):
         self.dropout = nn.Dropout(params.dropout)
 
         # the fully connected layer transforms the output to give the final output layer
-        self.fc = nn.Linear(params.lstm_hidden_dim*2, params.number_of_tags)
+        self.fc = nn.Linear(params.lstm_hidden_dim*2, params.number_of_classes)
         
     def forward(self, s):
 
